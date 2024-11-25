@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | Find myself</title>
+    <title>Tags: 网站, 自学， GitHub | Find myself</title>
     <meta name="author" content="Yang Ao" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -44,8 +44,6 @@
 <script src="/js/lib/preview.js"></script>
 
 
-
-<script src="/js/lib/search.js"></script>
 
 
 
@@ -158,57 +156,55 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            
-<div id="archives">
+            <div id="archives">
     
-    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
-    
-    <div id="timeline-wrap" ref="timeline">
+    <div class="categories-tags">
         
-        <div class="timeline" data-title="hardday">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/11/25</div>
-                <a href="/2024/11/25/hard-day/">
-                    <h3>hard day</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
         
-        <div class="timeline" data-title="learn">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/11/25</div>
-                <a href="/2024/11/25/learn/">
-                    <h3>learn</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E7%BD%91%E7%AB%99-%E8%87%AA%E5%AD%A6%EF%BC%8C-GitHub/" style="color: #ff7d73">
-                                网站, 自学， GitHub
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
+        
+        <span>
+            <a href="/tags/%E7%BD%91%E7%AB%99-%E8%87%AA%E5%AD%A6%EF%BC%8C-GitHub/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                网站, 自学， GitHub
+            </a>
+        </span>
+        
+        
+        
         
     </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2024/11/25</div>
+            <a href="/2024/11/25/learn/">
+                <h3>learn</h3>
+            </a>
+            <div class="info">
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </span>
+                    
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/%E7%BD%91%E7%AB%99-%E8%87%AA%E5%AD%A6%EF%BC%8C-GitHub/" style="color: #ff7d73">
+                            网站, 自学， GitHub
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
 </div>
 
             <footer id="footer">
