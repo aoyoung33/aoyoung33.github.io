@@ -89,6 +89,11 @@
             <span>&ensp;Tags</span>
         </a>
         
+        <a href="/archives">
+            <i class="fa-solid fa-search fa-fw"></i>
+            <span>&ensp;Search</span>
+        </a>
+        
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
@@ -143,6 +148,15 @@
                     </div>
                 </a>
                 
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-search fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Search</div>
+                    </div>
+                </a>
+                
             </div>
         </transition>
     </nav>
@@ -156,7 +170,7 @@
     <div
         id="home-background"
         ref="homeBackground"
-        data-images="/images/IMG_2210.JPG"
+        data-images="/images/IMG_2210.JPG,/images/background2.jpg,/images/background4.JPG,/images/background5.jpg,/images/background6.jpg"
     ></div>
     <div id="home-info" @click="homeClick">
         <span class="loop"></span>
@@ -182,7 +196,7 @@
 
 <div class="post">
     <a href="/2024/11/25/learn/">
-        <h2 class="post-title">Learn how to set up a website with hexo and github pages</h2>
+        <h2 class="post-title">Learn how to build a website with hexo and github pages</h2>
     </a>
     <div class="category-and-date">
         
@@ -207,8 +221,7 @@
     <div class="description">
         <div class="content" v-pre>
             
-            <p><strong>简单记录</strong></p>
-<p>花了两天的时间终于建好了一个属于自己的个人网站。中间因为配置不成功好几次想要放弃，但是又坚持下来。感谢互联网上发布教程的所有人，感谢生成式人工智能给我耐心解释，为我寻找可能的解决方法。<br>
+            <p>花了两天的时间终于建好了一个属于自己的个人网站。中间因为配置不成功好几次想要放弃，但是又坚持下来。感谢互联网上发布教程的所有人，感谢生成式人工智能给我耐心解释，为我寻找可能的解决方法。<br>
             
         </div>
     </div>
@@ -222,17 +235,17 @@
         
         <span class="tag">
             
-            <a href="/tags/%E7%BD%91%E7%AB%99/" style="color: #00bcd4">网站</a>
+            <a href="/tags/%E7%BD%91%E7%AB%99/" style="color: #ff7d73">网站</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/%E8%87%AA%E5%AD%A6/" style="color: #ffa2c4">自学</a>
+            <a href="/tags/%E8%87%AA%E5%AD%A6/" style="color: #00bcd4">自学</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/GitHub/" style="color: #00a596">GitHub</a>
+            <a href="/tags/GitHub/" style="color: #ffa2c4">GitHub</a>
         </span>
         
     </div>
@@ -290,7 +303,7 @@
         </div>
         <div class="name">Yang Ao</div>
         <div class="description">
-            <p>一个学教育的人<br>喜欢植物和音乐<br>学习外语是我一辈子都不想放弃的事情<br>Herstory<br>…</p>
+            <p>一个学教育的人<br>喜欢植物和音乐<br>喜欢长跑<br>学习外语是我一辈子都不想放弃的事情<br>Herstory<br>…</p>
 
         </div>
         
@@ -345,5 +358,11 @@
     ></canvas>
     <script src="https://s4.zstatic.net/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="/js/fireworks.min.js"></script>
+    
+    <canvas
+    id="background"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -2"
+    ></canvas>
+    <script src="/js/background.min.js"></script>
 </body>
 </html>
