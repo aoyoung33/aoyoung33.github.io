@@ -46,6 +46,12 @@
 <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/gitalk/1.8.0/gitalk.min.css" />
 
 
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
+
+
+<script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
 
 
 
@@ -178,21 +184,21 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E7%BD%91%E7%AB%99/" style="color: #ffa2c4">
+                <a href="/tags/%E7%BD%91%E7%AB%99/" style="color: #ff7d73">
                     网站
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/%E8%87%AA%E5%AD%A6/" style="color: #00a596">
+                <a href="/tags/%E8%87%AA%E5%AD%A6/" style="color: #00bcd4">
                     自学
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/GitHub/" style="color: #00bcd4">
+                <a href="/tags/GitHub/" style="color: #ff7d73">
                     GitHub
                 </a>
             </span>
@@ -215,11 +221,15 @@
     </div>
     
     
+    
     <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
+        <div id="waline-container"></div>
     </div>
     
     
+    <div id="comment">
+        <div id="twikoo-container"></div>
+    </div>
     
     
 </div>
@@ -254,23 +264,6 @@
     <script src="/js/main.js"></script>
     
     
-<script
-    src="https://giscus.app/client.js"
-    data-repo=""
-    data-repo-id=""
-    data-category=""
-    data-category-id=""
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang=""
-    crossorigin
-    async
-></script>
-
 
 <script>
     const gitalk = new Gitalk({
@@ -287,6 +280,33 @@
 </script>
 
 
+<script>
+    Waline.init({
+        el: "#waline-container",
+        serverURL: "",
+        commentCount: true,
+        pageview: false,
+        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
+        meta: "nick,mail,link".split(","),
+        requiredMeta: "nick".split(","),
+        lang: "",
+        wordLimit: 0,
+        pageSize: "10",
+        login: "enable",
+        
+    });
+</script>
+
+
+<script>
+    twikoo.init({
+        el: "#twikoo-container",
+        envId: "",
+        region: "",
+        path: location.pathname,
+        lang: "",
+    })
+</script>
 
 
     
