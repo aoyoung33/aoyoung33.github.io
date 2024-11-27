@@ -14,7 +14,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
-    <link rel="icon" href="/images/profile.jpg" />
+    <link rel="icon" href="/images/avatar.jpg" />
     <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
 <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
@@ -42,8 +42,6 @@
 <script src="/js/lib/preview.js"></script>
 
 
-
-<script src="/js/lib/search.js"></script>
 
 
 
@@ -90,11 +88,6 @@
         <a href="/tags">
             <i class="fa-solid fa-tags fa-fw"></i>
             <span>&ensp;Tags</span>
-        </a>
-        
-        <a href="/archives">
-            <i class="fa-solid fa-search fa-fw"></i>
-            <span>&ensp;Search</span>
         </a>
         
     </nav>
@@ -151,15 +144,6 @@
                     </div>
                 </a>
                 
-                <a href="/archives">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-search fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Search</div>
-                    </div>
-                </a>
-                
             </div>
         </transition>
     </nav>
@@ -171,8 +155,6 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             
 <div id="archives">
-    
-    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
     
     <div id="timeline-wrap" ref="timeline">
         
@@ -217,7 +199,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/%E7%BD%91%E7%AB%99/" style="color: #03a9f4">
+                            <a href="/tags/%E7%BD%91%E7%AB%99/" style="color: #00a596">
                                 网站
                             </a>
                         </span>
@@ -231,7 +213,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/GitHub/" style="color: #03a9f4">
+                            <a href="/tags/GitHub/" style="color: #ffa2c4">
                                 GitHub
                             </a>
                         </span>
@@ -269,7 +251,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/%E7%94%B5%E5%BD%B1/" style="color: #03a9f4">
+                            <a href="/tags/%E7%94%B5%E5%BD%B1/" style="color: #ff7d73">
                                 电影
                             </a>
                         </span>
@@ -294,7 +276,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2024 - 2024 Find myself
+            2022 - 2024 Find myself
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
