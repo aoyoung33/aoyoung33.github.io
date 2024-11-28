@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "LXGWWenKai";
+    src: url("/fonts/LXGWWenKai-Regular.ttf") format("truetype"),
+    url("/fonts/LXGWWenKai-Bold.ttf") format("truetype"),
+    url("/fonts/LXGWWenKaiMono-Regular.ttf") format("truetype"),
+    url("/fonts/LXGWWenKaiMono-Bold.ttf") format("truetype");
+  }
+  
+  body {
+    font-family: "LXGWWenKai", sans-serif;
+  }
