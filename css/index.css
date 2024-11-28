@@ -3459,7 +3459,6 @@ pre[class*='language-'] pre > code.highlight {
 }
 #footer {
   position: relative;
-  background-color: #49b1f5;
   background-attachment: scroll;
   background-position: bottom;
   background-size: cover;
