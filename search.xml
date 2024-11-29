@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>修改butterfly主题字体</title>
+      <link href="/2024/11/29/%E4%BF%AE%E6%94%B9butterfly%E4%B8%BB%E9%A2%98%E5%AD%97%E4%BD%93/"/>
+      <url>/2024/11/29/%E4%BF%AE%E6%94%B9butterfly%E4%B8%BB%E9%A2%98%E5%AD%97%E4%BD%93/</url>
+      
+        <content type="html"><![CDATA[<p>本来是下载了霞鹜文楷字体到本地，想要通过本地配置的方式修改默认字体。但是总是失败，出现很多问题，最后还是选择了使用 Google fonts 的在线字体，幸好其中有霞鹜文楷的繁体版本，正好我也挺喜欢繁体，那就用这个吧！</p><h3 id="1-在-Google-fonts-中搜索-LXGW-WenKai-TC"><a href="#1-在-Google-fonts-中搜索-LXGW-WenKai-TC" class="headerlink" title="1. 在 Google fonts 中搜索 LXGW WenKai TC"></a>1. <strong>在 Google fonts 中搜索 LXGW WenKai TC</strong></h3><p>网址： <a href="https://fonts.google.com/specimen/LXGW+WenKai+TC?query=LXGW">https://fonts.google.com/specimen/LXGW+WenKai+TC?query=LXGW</a></p><p>选择link 部分的代码，之后需要复制到 butterfly 主题配置文件中。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&lt;link</span> <span class="string">href=&quot;https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&amp;display=swap&quot;</span> <span class="string">rel=&quot;stylesheet&quot;&gt;</span></span><br></pre></td></tr></table></figure><h3 id="2-在-inject-部分插入字体链接"><a href="#2-在-inject-部分插入字体链接" class="headerlink" title="2. 在 inject 部分插入字体链接"></a>2. <strong>在 <code>inject</code> 部分插入字体链接</strong></h3><p>将 <strong>Google Fonts</strong> 中的 <strong>LXGW WenKai TC</strong> 字体链接添加到 butterfly 主题配置（config. Butterfly. Yml 文件中）中的 <code>inject</code> 部分，以便在 HTML 中加载这个字体。</p><p>在 <code>inject</code> 部分添加 Google Fonts 的 <code>&lt;link&gt;</code> 标签，放在 head：后面，注意缩进</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line"><span class="attr">head:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">href=&quot;https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&amp;display=swap&quot;</span> <span class="string">rel=&quot;stylesheet&quot;&gt;</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/custom.css&quot;&gt;</span></span><br><span class="line"> <span class="comment"># - &lt;link rel=&quot;stylesheet&quot; href=&quot;/xxx.css&quot;&gt;</span></span><br><span class="line"><span class="attr">bottom:</span></span><br><span class="line"><span class="comment"># - &lt;script src=&quot;xxxx&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure><p>这段代码会在页面的 <code>&lt;head&gt;</code> 部分插入 Google Fonts 字体的引用。</p><h3 id="3-修改主题配置文件中的字体设置"><a href="#3-修改主题配置文件中的字体设置" class="headerlink" title="3.修改主题配置文件中的字体设置"></a>3.<strong>修改主题配置文件中的字体设置</strong></h3><p>接下来，需要修改主题配置文件中关于字体的设置，以确保使用 <strong>LXGW WenKai TC</strong> 字体。</p><p>仍然在 <code>_config.butterfly.yml </code> 文件中，找到 <code>font</code> 配置项，修改 <code>font-family</code> 为引入的字体 LXGW WenKai TC。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">font:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">global-font-size:</span> <span class="string">20px</span></span><br><span class="line"><span class="attr">code-font-size:</span> <span class="string">14px</span></span><br><span class="line"><span class="attr">font-family:</span> <span class="string">&#x27;&quot;LXGW WenKai TC&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Lato, Roboto, &quot;PingFang SC&quot;, sans-serif&#x27;</span></span><br><span class="line"><span class="attr">code-font-family:</span> <span class="string">consolas,</span> <span class="string">Menlo,</span> <span class="string">&quot;PingFang SC&quot;</span><span class="string">,</span> <span class="string">&quot;Microsoft YaHei&quot;</span><span class="string">,</span> <span class="string">monospace</span></span><br></pre></td></tr></table></figure><p>在这里，<code>font-family</code> 指定了全局字体，<code>&quot;LXGW WenKai TC&quot;</code> 就是引入的字体名称。后面可以设置备用字体，如 <code>Microsoft YaHei</code>、<code>PingFang SC</code> 等，以防该字体加载失败时，浏览器可以选择其他字体。</p><p><em>特别注意，因为在 hexo cl 时总是出错，所以需要添加引号</em></p><blockquote><p>YAMLException: bad indentation of a mapping entry (830:32)<br>827 | font:<br>828 | global-font-size: 17 px<br>829 | code-font-size: 15 px<br>830 | font-family: ‘LXGW WenKai TC’, -apple-system, sans-serif<br>————————————–^<br>831 | code-font-family: consolas, Menlo, “PingFang SC”, “Microsoft …<br>832 | at generateError</p></blockquote><p>出现这种问题，是说引号不太对，我是把所有字体用单引号 <code>&#39;</code>,特别的字体用 <code>&quot;</code> 括起来。这样就可以防止出错</p><h3 id="4-修改-source-css-variables-styl-文件中的字体设置"><a href="#4-修改-source-css-variables-styl-文件中的字体设置" class="headerlink" title="4. 修改 source/css/_variables.styl 文件中的字体设置"></a>4. <strong>修改 <code>source/css/_variables.styl</code> 文件中的字体设置</strong></h3><p>在 <code>themes/butterfly/source/css/_var.styl</code> 文件中设置字体，确保 <code>$font-family-base</code> 的字体设置包含 <code>LXGW WenKai TC</code>。</p><ol><li>打开 <code>themes/butterfly/source/css/_var.styl</code> 文件。</li><li>找到 <code>$font-family-base</code> 变量，修改为：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$dafault-font-family = &#x27;LXGW WenKai TC&#x27;, -apple-system, BlinkMacSystemFont, &#x27;Segoe UI&#x27;, &#x27;Helvetica Neue&#x27;, Lato, Roboto, &#x27;PingFang SC&#x27;, $chinseFont, sans-serif</span><br></pre></td></tr></table></figure><p>这会确保页面的基础字体使用 <strong>LXGW WenKai TC</strong>。</p><h3 id="5-清理缓存并重新生成页面"><a href="#5-清理缓存并重新生成页面" class="headerlink" title="5. 清理缓存并重新生成页面"></a>5. <strong>清理缓存并重新生成页面</strong></h3><p>在修改完配置文件后，需要清理 Hexo 的缓存并重新生成页面：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>本地预览没有问题后，部署到 github 仓库，执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure><h3 id="6-修改网站都字体大小"><a href="#6-修改网站都字体大小" class="headerlink" title="6. 修改网站都字体大小"></a>6. 修改网站都字体大小</h3><p>尝试直接修改主题配置文件中 <code>font</code> 的 size，发现不起作用。所以就去改了var.styl 文件，找到<code>font-size</code>，改成 16px 就差不多。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$font-size = hexo-config(&#x27;font.global_font_size&#x27;) ? convert(hexo-config(&#x27;font.global_font_size&#x27;)) : 16px</span><br></pre></td></tr></table></figure><p>最后，我太感谢github的 copilot ！！！简直就是编程的救星～</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网站 </tag>
+            
+            <tag> 自学 </tag>
+            
+            <tag> 字体 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>看《好东西》之后</title>
       <link href="/2024/11/26/%E7%9C%8B%E3%80%8A%E5%A5%BD%E4%B8%9C%E8%A5%BF%E3%80%8B%E4%B9%8B%E5%90%8E/"/>
       <url>/2024/11/26/%E7%9C%8B%E3%80%8A%E5%A5%BD%E4%B8%9C%E8%A5%BF%E3%80%8B%E4%B9%8B%E5%90%8E/</url>
@@ -40,7 +69,7 @@
       
       <categories>
           
-          <category> 学习 </category>
+          <category> 教程 </category>
           
       </categories>
       
