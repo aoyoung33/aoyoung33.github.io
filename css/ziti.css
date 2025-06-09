@@ -1,7 +1,7 @@
 @font-face{
     font-family: 'hexo';
     font-display: swap;
-    src: url('/font/ding.ttf') format("truetype");
+    src: url('/fonts/ding.ttf') format("truetype");
 }
 body {
     font-family: 'hexo';
