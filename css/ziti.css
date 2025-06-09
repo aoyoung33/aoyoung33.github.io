@@ -1,7 +1,7 @@
 @font-face{
     font-family: 'hexo';
     font-display: swap;
-    src: url('/font/dingliesongtypeface20241217-2.ttf') format("truetype");
+    src: url('/font/ding.ttf') format("truetype");
 }
 body {
     font-family: 'hexo';
