@@ -8,9 +8,25 @@
       <link href="/2025/06/09/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E7%BD%91%E9%A1%B5%E6%96%87%E7%AB%A0%E7%9A%84%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/"/>
       <url>/2025/06/09/%E4%BD%BF%E7%94%A8hexo%E7%94%9F%E6%88%90%E7%BD%91%E9%A1%B5%E6%96%87%E7%AB%A0%E7%9A%84%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="进入博客目录"><a href="#进入博客目录" class="headerlink" title="进入博客目录"></a>进入博客目录</h2><p>首先先打开终端，进入博客目录。<br>例如我的博客目录是：&#x2F;Users&#x2F;yangao&#x2F;yangyang&#x2F;yangblog<br>因此，在终端输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Users/yangao/yangyang/yangblog</span><br></pre></td></tr></table></figure><h2 id="创建新的文章"><a href="#创建新的文章" class="headerlink" title="创建新的文章"></a>创建新的文章</h2><p>在终端输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;你的文章标题&quot;</span></span><br></pre></td></tr></table></figure><p>那么生成的文章将会储存在</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/yangao/yangyang/yangblog/source/_posts/你的文章标题.md</span><br></pre></td></tr></table></figure><h2 id="编辑文章"><a href="#编辑文章" class="headerlink" title="编辑文章"></a>编辑文章</h2><p>使用 markdown 编辑文章内容<br>文章的front-matter：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 使用hexo生成网页文章的操作步骤</span><br><span class="line">date: 2025-06-09 20:51:07</span><br><span class="line">tags: </span><br><span class="line">    学习;</span><br><span class="line">    网站;</span><br><span class="line">    hexo；</span><br><span class="line">categories: </span><br><span class="line">    教程</span><br><span class="line">cover: </span><br><span class="line">top-image: </span><br><span class="line">description: 花了两天的时间终于建好了一个属于自己的个人网站。中间因为配置不成功好几次想要放弃，但是又坚持下来。感谢互联网上发布教程的所有人，感谢生成式人工智能给我耐心解释，为我寻找可能的解决方法。</span><br><span class="line">---</span><br></pre></td></tr></table></figure>]]></content>
       
       
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网站 </tag>
+            
+            <tag> 学习 </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
@@ -33,7 +49,9 @@
       
         <tags>
             
-            <tag> 学习; 韩语; </tag>
+            <tag> 学习 </tag>
+            
+            <tag> 韩语 </tag>
             
         </tags>
       
@@ -57,8 +75,6 @@
       
       
         <tags>
-            
-            <tag> 生活 </tag>
             
             <tag> 记录 </tag>
             
@@ -118,9 +134,9 @@
             
             <tag> 网站 </tag>
             
-            <tag> 字体 </tag>
-            
             <tag> 自学 </tag>
+            
+            <tag> 字体 </tag>
             
         </tags>
       
