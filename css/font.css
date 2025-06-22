@@ -1,10 +1,9 @@
 @font-face {
     font-family: "dingliesong";
     src: url("/fonts/dingliesong.ttf") format("opentype");
-；
-
+    
   }
   
   body {
-    font-family: "dingliesong", sans-serif;
+    font-family: "dingliesong";
   }
