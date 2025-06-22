@@ -1,12 +1,10 @@
 @font-face {
-    font-family: "SourceHanSerifCN";
-    src: url("/fonts/SourceHanSerifCN-SemiBold.otf") format("opentype");
-    url("/fonts/SourceHanSerifCN-Regular.otf") format("opentype");
-    url("/fonts/SourceHanSerifCN-Medium.otf") format("opentype")
+    font-family: "dingliesong";
+    src: url("/fonts/dingliesong.ttf") format("opentype");
 ；
 
   }
   
   body {
-    font-family: "SourceHanSerifCN", sans-serif;
+    font-family: "dingliesong", sans-serif;
   }
